@@ -14,6 +14,6 @@ public class PubSubController {
     @PostMapping("/publishMessage/{message}")
     public String publishMessage(@PathVariable String message) {
         messagingGateway.sendToPubsub(message);
-        return "Message Delivered";
+        return "Message is delivered to pubsub topic";
     }
 }
